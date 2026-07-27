@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="de">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>EARL Admin</title><link rel="icon" href="./assets/earl-logo.png"><link rel="stylesheet" href="./css/styles.css"><link rel="stylesheet" href="./css/admin.css"></head>
+<body class="admin-body">
+  <header class="admin-top"><a class="brand" href="./index.html"><img src="./assets/earl-logo.png" alt="EARL"><span>EARL ADMIN CONTROL</span></a><button id="logout-button" class="button hidden">Abmelden</button></header>
+  <main class="admin-main">
+    <section id="login-panel" class="login-panel"><span class="eyebrow">GESCHÜTZTER BEREICH</span><h1>Admin Login</h1><p>Anmeldung mit dem in Supabase freigeschalteten Admin-Konto.</p>
+      <form id="login-form"><label>E-Mail<input name="email" type="email" required autocomplete="username"></label><label>Passwort<input name="password" type="password" required autocomplete="current-password"></label><button class="button primary" type="submit">Einloggen</button><p class="form-status"></p></form>
+    </section>
+    <section id="admin-panel" class="hidden">
+      <header class="section-head"><span>LIVE CONTROL</span><h1>EARL Admin Panel</h1><p>Änderungen werden über Supabase sofort auf der öffentlichen Website sichtbar.</p></header>
+      <nav id="admin-tabs" class="admin-tabs"></nav>
+      <div class="manager-head"><div><h2 id="manager-title">Daten</h2><p id="manager-copy"></p></div><button id="new-record" class="button primary">Neuer Eintrag</button></div>
+      <div class="table-wrap"><table><thead id="manager-head"></thead><tbody id="manager-body"></tbody></table></div>
+    </section>
+  </main>
+  <div id="editor-modal" class="modal hidden"><form id="editor-form" class="modal-card editor-card"><button id="editor-close" class="close" type="button">×</button><span class="eyebrow">DATENSATZ BEARBEITEN</span><h2 id="editor-title">Eintrag</h2><div id="editor-fields" class="editor-fields"></div><div class="actions"><button class="button" id="editor-cancel" type="button">Abbrechen</button><button class="button primary" type="submit">Speichern</button></div><p class="form-status"></p></form></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="./js/config.js"></script><script src="./js/supabase-client.js"></script><script src="./js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Offizielles Portal der Elite Austria Racing League (EARL) – Die realistische Formel 1 Liga der Elite Racing Community (ERC)">
+  <title>EARL | Elite Austria Racing League (ERC)</title>
+  <link rel="icon" href="./assets/earl-logo.png">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home">
+      <img src="./assets/erc-logo.png" alt="ERC" class="brand-sub-logo">
+      <img src="./assets/earl-logo.png" alt="EARL">
+      <span>EARL | Elite Racing Community</span>
+    </a>
+    <button class="menu-button" type="button" aria-label="Navigation öffnen">☰</button>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about-erc">Über ERC & EARL</a>
+      <a href="#kalender">Rennkalender</a>
+      <a href="#teams">Teams</a>
+      <a href="#fahrer">Fahrer</a>
+      <a href="#standings">Standings</a>
+      <a href="#regelwerk">Regelwerk</a>
+      <a href="#registrieren">Registrieren</a>
+      <a href="#anmeldung">Rennanmeldung</a>
+    </nav>
+    <a class="admin-link" href="./admin.html">Admin</a>
+  </header>
+
+  <main>
+    <section id="home" class="page hero active">
+      <div class="hero-copy">
+        <span class="eyebrow">ELITE RACING COMMUNITY PRESENTS</span>
+        <h1>REALISTIC F1.<br><i>OFFICIAL LEAGUE.</i><br>CONQUER THE GRID.</h1>
+        <p>Die <strong>Elite Austria Racing League (EARL)</strong> ist die hochkompetitive und realistische Formel 1 Sim-Racing-Liga unter dem Dach der <strong>Elite Racing Community (ERC)</strong>.</p>
+        <div class="actions">
+          <a class="button primary" href="#registrieren">Fahrer werden</a>
+          <a class="button" href="#about-erc">Mehr über ERC & EARL</a>
+        </div>
+      </div>
+
+      <div class="intro-logo-container">
+        <img class="hero-logo logo-erc" src="./assets/erc-logo.png" alt="ERC Logo">
+        <img class="hero-logo logo-earl hidden-intro" src="./assets/earl-logo.png" alt="EARL Logo">
+        <div class="intro-caption">A Division of Elite Racing Community</div>
+      </div>
+
+      <div class="event-strip">
+        <div><small>NÄCHSTES QUALIFYING</small><strong id="next-quali">Wird geladen …</strong></div>
+        <div><small>NÄCHSTES RENNEN</small><strong id="next-race">Wird geladen …</strong></div>
+        <div><small>DACHVERBAND</small><strong>Elite Racing Community (ERC)</strong></div>
+      </div>
+    </section>
+
+    <section id="about-erc" class="page-section info-section">
+      <div class="section-head">
+        <span>COMMUNITY & PHILOSOPHIE</span>
+        <h2>Die Elite Austria Racing League in der ERC</h2>
+        <p>Professionelles Sim-Racing, kompromisslose Realitätsnähe und eine starke Gemeinschaft.</p>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-card">
+          <h3>🏎️ Die Formel 1 Speerspitze der ERC</h3>
+          <p>Die <strong>Elite Austria Racing League (EARL)</strong> bildet das Herzstück des Formel-1-Motorsports innerhalb der <strong>Elite Racing Community (ERC)</strong>. Hier fahren die ambitioniertesten Fahrer der Region unter realistischsten Bedingungen.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>⚙️ Maximale Simulation & Realismus</h3>
+          <p>Bei uns steht echtes Rennhandwerk im Vordergrund: Angepasste Boliden-Setups, professionelles Stewarding, realistische Rennlängen und ein strikt durchgesetztes Verhaltensregelwerk sorgen für fairen und packenden Rad-an-Rad-Motorsport.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>🤝 Teil der Elite Racing Community</h3>
+          <p>Als Teil der ERC profitierst du von einer organisierten Liga-Struktur, regelmäßigen Community-Events, Live-Übertragungen sowie einer Plattform für Fahrerentwicklung und Ligen-Austausch.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="kalender" class="page"><header class="section-head"><span>SAISON 2026</span><h1>Rennkalender</h1><p>Alle Termine und Anmeldestati auf einen Blick.</p></header><div id="calendar-grid" class="calendar-grid"></div></section>
+    
+    <section id="teams" class="page"><header class="section-head"><span>EARL PADDOCK</span><h1>Teams</h1><p>Team anklicken: Nach der dreisekündigen Logoanimation erscheinen Teamchef und Fahrer.</p></header><div id="team-list" class="team-list"></div></section>
+    
+    <section id="fahrer" class="page"><header class="section-head"><span>DAS GRID</span><h1>Fahrerkarten</h1></header><div id="driver-grid" class="driver-grid"></div></section>
+    
+    <section id="standings" class="page"><header class="section-head"><span>LIVE WERTUNG</span><h1>Saison-Standings</h1></header><div class="table-wrap"><table><thead><tr><th>Pos.</th><th>Fahrer</th><th>Team</th><th>Siege</th><th>Podien</th><th>Strafpunkte</th><th>Punkte</th></tr></thead><tbody id="standings-body"></tbody></table></div></section>
+    
+    <section id="regelwerk" class="page"><header class="section-head"><span>OFFIZIELLE AKTE</span><h1>Regelwerk</h1><p>Kapitel öffnen, lesen und wieder zuklappen.</p></header><div id="rules-list" class="rules-list"></div></section>
+
+    <section id="registrieren" class="page"><header class="section-head"><span>JOIN THE GRID</span><h1>Fahrer registrieren</h1><p>Keine E-Mail-Adresse erforderlich. Die Ligaleitung prüft jede Registrierung.</p></header>
+      <form id="registration-form" class="form-card">
+        <label>Fahrername<input name="display_name" required maxlength="50"></label><label>Discord-Name<input name="discord_name" required maxlength="50"></label>
+        <label>Nationalität<input name="nationality" maxlength="40"></label><label>Startnummer<input name="race_number" type="number" min="1" max="999" required></label>
+        <label>Plattform<select name="platform"><option>PC</option><option>PlayStation 5</option><option>Xbox Series</option></select></label>
+        <label>Wunschteam<select id="registration-team" name="requested_team_id" required></select></label>
+        <label class="wide">Kurze Nachricht<textarea name="notes" rows="4"></textarea></label><button class="button primary wide" type="submit">Registrierung absenden</button>
+        <p class="form-status wide" role="status"></p>
+      </form>
+    </section>
+
+    <section id="anmeldung" class="page"><header class="section-head"><span>RACE CONTROL</span><h1>Rennanmeldung</h1><p>Die Teilnahme am Qualifying ist für angemeldete Rennfahrer verpflichtend.</p></header>
+      <form id="signup-form" class="form-card"><label>Fahrername<input name="driver_name" required></label><label>Discord-Name<input name="discord_name" required></label>
+        <label class="wide">Event<select id="signup-race" name="race_id" required></select></label><label>Art<select name="signup_type"><option value="race">Rennen</option><option value="qualifying">Nur Qualifying</option></select></label>
+        <label>Notiz<input name="notes"></label><button class="button primary wide" type="submit">Anmeldung prüfen</button><p class="form-status wide" role="status"></p>
+      </form>
+    </section>
+  </main>
+
+  <div id="confirm-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+    <div class="modal-card"><span class="eyebrow">VERPFLICHTENDE BESTÄTIGUNG</span><h2 id="confirm-title">Qualifying ist Pflicht</h2><p>Mit deiner Rennanmeldung bestätigst du ausdrücklich, dass du am zugehörigen Qualifying teilnimmst.</p><div class="actions"><button id="confirm-no" class="button" type="button">Nein, zurück</button><button id="confirm-yes" class="button primary" type="button">Ja, ich bestätige</button></div></div>
+  </div>
+
+  <footer>
+    <img src="./assets/erc-logo.png" alt="ERC Logo" style="height:24px; margin-right:8px;">
+    <img src="./assets/earl-logo.png" alt="EARL Logo" style="height:24px; margin-right:12px;">
+    <span>© 2026 EARL · Elite Austria Racing League (ERC)</span>
+    <a href="./admin.html">Admin Panel</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="./js/config.js"></script>
+  <script src="./js/data.js"></script>
+  <script src="./js/supabase-client.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
